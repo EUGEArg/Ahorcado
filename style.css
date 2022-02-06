@@ -104,12 +104,15 @@ display: none;
  @media(max-width: 600px) {
 
   .contenedor, .inicio-juego {
-    margin: 5px 40px 5px 40px;
+    margin: 5px 20px 5px 20px;
   }
 
   #abecedario, #equivocadas, #letras, .vidas-img, .btn-game, #btn-new-game{
-    font-size: 28px;
+    font-size: 23px;
+    margin: 0px 20px 0px 20px;
   }
+
+
 
   h1 {
     font-size: 30px;
@@ -119,6 +122,11 @@ display: none;
   #alinar-img-equiv-guiones {
    display: flex;
    flex-direction: column;
+  }
+  .img-portada, #imagenes {
+    height: 230px;
+    width: 230px;
+    padding-top: 10px;
   }
 
  
