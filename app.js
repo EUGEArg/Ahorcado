@@ -65,12 +65,12 @@ abc.forEach((element) => {  // creo abecedario con botones
 
     if (vidas === 0) { // perdió el juego
       alphabet.innerHTML = "FIN DEL JUEGO";
-      document.getElementById('btn-new-game').style.display = 'block';
+      document.getElementById('btn-new-game').style.visibility= "visible";
     }
 
     if (guionesArr.join("") === palabraSeleccionada) { // ganó el juego
       alphabet.innerHTML = "FELICIDADES, GANASTE!!!";
-      document.getElementById('btn-new-game').style.display = 'block';
+      document.getElementById('btn-new-game').style.visibility= "visible";
     }
 
     if (vidas === 8) {  // resto vidas, aparece imágen

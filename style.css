@@ -12,25 +12,28 @@ h1 {
 }
 
 .inicio-juego {
+  height : 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 10px;
   border: rgb(184, 245, 92) solid;
-  margin: 40px 80px 10px 80px;
+  margin: 25px 80px 0px 80px;
   border-radius: 5px;
   font-size: 40px;
 }
 
 .contenedor {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+	height : 100%;
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
   padding-top: 10px;
   border: rgb(184, 245, 92) solid;
-  margin: 15px 80px 10px 80px;
+  margin: 25px 80px 0px 80px;
   border-radius: 5px;
   font-size: 40px;
+
 }
 
 #abecedario {
@@ -59,8 +62,8 @@ h1 {
 #imagenes,
 .img-portada {
   display: block;
-  height: 300px;
-  width: 300px;
+  height: 350px;
+  width: 350px;
   padding: 10px 20px 0px 20px;
 }
 
@@ -92,7 +95,7 @@ h1 {
 }
 
 #btn-new-game{
-display: none;
+  visibility:  hidden;
 }
 
 #foot {
