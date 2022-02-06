@@ -104,15 +104,13 @@ display: none;
  @media(max-width: 600px) {
 
   .contenedor, .inicio-juego {
-    margin: 5px 20px 5px 20px;
+    margin: 40px 20px 5px 20px;
   }
 
   #abecedario, #equivocadas, #letras, .vidas-img, .btn-game, #btn-new-game{
     font-size: 23px;
     margin: 0px 20px 0px 20px;
   }
-
-
 
   h1 {
     font-size: 30px;
