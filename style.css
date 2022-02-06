@@ -3,7 +3,6 @@
 body {
   font-family: "Barlow", sans-serif;
   color: black;
-  margin: 0px;
 }
 
 h1 {
@@ -17,7 +16,7 @@ h1 {
   align-items: center;
   padding-top: 10px;
   border: rgb(184, 245, 92) solid;
-  margin: 10px 80px 5px 80px;
+  margin: 10px 80px 20px 80px;
   border-radius: 5px;
   font-size: 40px;
 }
@@ -90,11 +89,13 @@ h1 {
   bottom: 0; 
 }
 
-
  @media(max-width: 600px) {
 
   .contenedor, .inicio-juego {
-    margin: 30px 20px 40px 20px;
+    height: 80vh;
+    padding-top: 50px;
+    margin: 40px 20px 40px 20px;
+    
   }
 
   #abecedario, #equivocadas, #letras, .vidas-img, .btn-game, #btn-new-game {
@@ -105,6 +106,7 @@ h1 {
   h1 {
     font-size: 30px;
     text-align: center;
+    padding-top: 20px;
   }
 
   #alinar-img-guiones {
@@ -114,7 +116,11 @@ h1 {
   .img-portada, #imagenes {
     height: 230px;
     width: 230px;
-    padding-top: 10px;
+    padding-top: 40px;
+  }
+
+  #foot {
+    padding-bottom: 30px;
   }
   
  }
