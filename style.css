@@ -7,74 +7,117 @@ body {
   color: black;
 }
 
-/* padre index  */
-.inicio-juego { 
+h1 {
+  margin: 10px;
+}
+
+.inicio-juego {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 30px;
+  padding-top: 10px;
   border: rgb(184, 245, 92) solid;
-  margin: 40px 60px 40px 60px;
-  border-radius: 5px; 
+  margin: 40px 80px 10px 80px;
+  border-radius: 5px;
   font-size: 40px;
 }
 
-/* padre juego */
 .contenedor {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  text-align: center;
-  padding-top: 30px;
-  margin: 20px 60px 40px 60px;
+  align-items: center;
+  padding-top: 10px;
+  border: rgb(184, 245, 92) solid;
+  margin: 15px 80px 10px 80px;
+  border-radius: 5px;
+  font-size: 40px;
 }
 
 #abecedario {
   border: rgb(184, 245, 92) solid;
   background-color: rgb(205, 247, 144);
   border-radius: 5px;
-  margin: 20px 40px 30px 40px;
-  padding: 15px;
-  font-size: 45px;
+  margin: 0px 40px 0px 40px;
+  padding: 10px;
+  font-size: 40px;
   text-align: center;
-  
+}
+
+#alinar-img-equiv-guiones {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#letras {
+  font-size: 40px;
+  margin-right: 40px;
 }
 
 #imagenes,
 .img-portada {
   display: block;
-  height: 400px;
-  width: 400px;
-  margin: 10px auto;
-  
+  height: 300px;
+  width: 300px;
+  padding: 10px 20px 0px 20px;
 }
 
 .conten-img {
   position: relative;
-    display: inline-block;
-    text-align: center;
+  display: flex;
+  margin-left: 40px;
 }
 
 .vidas-img {
   position: absolute;
-    top: 10px;
-    left: 30px;
+  top: 10px;
+  font-size: 40px;
 }
 
+#equivocadas {
+  font-size: 30px;
+  color: rgb(248, 36, 71);
+}
 
-.boton {
+.btn-game, #btn-new-game {
+  
   background-color: rgb(184, 245, 92);
   border-radius: 5px;
+  border: none;
   font-size: 40px;
-  padding: 10px;
+  padding: 8px;
+  font-family: "Barlow", sans-serif;
+}
+
+#btn-new-game{
+display: none;
 }
 
 #foot {
-  font-size: 20px;
-  padding: 20px;
+  font-size: 15px;
+  padding: 20px 0px 10px 0px;
 }
 
 
-#equivocadas {
-  font-size: 40px;
+ @media(max-width: 600px) {
+
+  .contenedor {
+    margin: 5px 80px 5px 80px;
+  }
+
+  #abecedario, #equivocadas, #letras, .vidas-img, .btn-game, #btn-new-game{
+    font-size: 28px;
+  }
+  h1 {
+    font-size: 40px;
+  }
+
+  #alinar-img-equiv-guiones{
+   display: flex;
+   flex-direction: column;
+  }
 }
+
+  

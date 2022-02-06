@@ -1,7 +1,7 @@
-const letters = document.getElementById("letras");
-let alphabet = document.getElementById("abecedario");
-const lives = document.getElementById("vidas");
-let images = document.getElementById("imagenes");
+const letters    = document.getElementById("letras");
+let alphabet     = document.getElementById("abecedario");
+const lives      = document.getElementById("vidas");
+let images       = document.getElementById("imagenes");
 let wrongLetters = document.getElementById("equivocadas");
 
 let palabras = [
@@ -11,73 +11,70 @@ let palabras = [
   "ballena",
   "jirafa",
   "caballo",
-  "paloma",
+  "ardilla",
   "hipopotamo",
   "leopardo",
   "conejo",
+  "delfin",
+  "hipocampo",
+  "lechuza",
+  "mapache",
+  "flamenco"
 ];
 
-const abc = "abcdefghijklmnopqrstuvwxyz".split(""); // ABECEDARIO
+const abc = "abcdefghijklmnopqrstuvwxyz".split(""); // abecedario
 
-let vidas = 9; // VIDAS DEL JUEGO
-lives.innerHTML = `<span class="text-4xl"> ${vidas}</span>`;
+let vidas = 9; // vidas del juego
+lives.innerHTML = `<span> ${vidas}</span>`;
 
-let historialArr = [];
+let historialArr = []; //historial de letras equivocadas
 
 const palabraSeleccionada =
-  palabras[Math.floor(Math.random() * palabras.length)]; //SELECCIÓN DE PALABRA AL AZAR
+  palabras[Math.floor(Math.random() * palabras.length)]; //selección de palabras al azar
 let pSeleccArr = palabraSeleccionada.split("");
-//console.log(pSeleccArr);
 
 const palabraGuiones = palabraSeleccionada.replace(/./g, "_");
-let guionesArr = palabraGuiones.split(""); //REEMPLAZO PALABRAS POR GUIONES
+let guionesArr = palabraGuiones.split(""); //reemplazo array de letras por guiones
 letters.innerHTML = guionesArr.join(" ");
-console.log(guionesArr );
 
-abc.forEach((element) => {
-  // CREO ABECEDARIO CON BOTONES
-  const button = document.createElement("button");
+abc.forEach((element) => {  // creo abecedario con botones
+ const button = document.createElement("button");
   button.innerHTML = element.toUpperCase();
   alphabet.appendChild(button).id = element;
 
-  button.addEventListener("click", (e) => {
+  button.addEventListener("click", (e) => { // click para seleccionar la letra
     let letraClickeada = e.target.id;
     let letraIndex = pSeleccArr.indexOf(letraClickeada);
-    
+
     for (let i = 0; i < pSeleccArr.length; i++) {
-      if (pSeleccArr[i] === letraClickeada) {
+      if (pSeleccArr[i] === letraClickeada) { // comparo letraClickeada con indice en palabra
         guionesArr[i] = letraClickeada;
         letters.innerHTML = guionesArr.join(" ").toUpperCase();
       }
     }
 
-    if (letraIndex === -1) { //LETRA CLICLEADA NO COINCIDE 
+    if (letraIndex === -1) { // letra cliqueada no coincide
       vidas--;
-      lives.innerHTML = `<span class="text-4xl"> ${vidas}</span>`;
-      button.classList.add("text-red-600");
-      historialArr.push(letraClickeada);
-      console.log(historialArr);
-      wrongLetters.innerHTML = historialArr.join(' - ').toUpperCase();
-      console.log(historialArr.join(' - '))
+      lives.innerHTML = `<span> ${vidas}</span>`;
 
-      
-    }
+      historialArr.push(letraClickeada); // agrago letra equivocada en historial
+      wrongLetters.innerHTML = historialArr.join(' - ').toUpperCase(); 
+      button.disabled = true; // deshabilito letra equivocada
+      button.style.cssText = "color:red";
+    } 
 
-    if (vidas === 0) {
-      //PERDIÓ
-      //console.log("FIN DEL JUEGO");
+    if (vidas === 0) { // perdió el juego
       alphabet.innerHTML = "FIN DEL JUEGO";
+      document.getElementById('btn-new-game').style.display = 'block';
     }
 
-    if (guionesArr.join("") === palabraSeleccionada) {
-      //GANÓ
+    if (guionesArr.join("") === palabraSeleccionada) { // ganó el juego
       alphabet.innerHTML = "FELICIDADES, GANASTE!!!";
+      document.getElementById('btn-new-game').style.display = 'block';
     }
 
-    if (vidas === 8) {
-      //Resto vidas, aparece imágen
-
-      images.innerHTML = `<img src="./images/8_vidas.webp" />`;
+    if (vidas === 8) {  // resto vidas, aparece imágen
+       images.innerHTML = `<img src="./images/8_vidas.webp" />`;
     } else if (vidas === 7) {
       images.innerHTML = `<img src="./images/7_vidas.webp" />`;
     } else if (vidas === 6) {
@@ -97,3 +94,4 @@ abc.forEach((element) => {
     }
   });
 });
+
