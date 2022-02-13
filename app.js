@@ -65,7 +65,6 @@ abc.forEach((element) => {  // creo abecedario con botones
 
     if (vidas === 0) { // perdió el juego
       alphabet.innerHTML = "PERDISTE! La palabra era: " + palabraSeleccionada.toUpperCase();
-      
       document.getElementById('btn-new-game').style.visibility= "visible";
     }
 
