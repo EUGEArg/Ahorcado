@@ -89,7 +89,7 @@ h1 {
   bottom: 0; 
 }
 
- @media(max-width: 600px) {
+@media(max-width: 768px) {
 
   .contenedor, .inicio-juego {
     height: 80vh;
@@ -98,7 +98,7 @@ h1 {
     
   }
 
-  #abecedario, #equivocadas, #letras, .vidas-img, .btn-game, #btn-new-game {
+ #abecedario, #equivocadas, #letras, .vidas-img, .btn-game, #btn-new-game {
     font-size: 23px;
     margin: 0px 20px 20px 20px;
   }
@@ -123,8 +123,8 @@ h1 {
     padding-bottom: 30px;
   }
   
- }
-
+ } 
+ 
 
 
   
